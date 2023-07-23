@@ -819,8 +819,11 @@ nav ul li a:hover{
     .blocs-rencontrer h1, .rencontrer-carte h1{
         font-size: 20;
     }
-    .blocs-rencontrer p, .rencontrer-carte p{
+    .blocs-rencontrer p{
         font-size: 15;
+    }
+    .rencontrer-carte p{
+        font-size: 13;
     }
     iframe{
         width: 400px;
