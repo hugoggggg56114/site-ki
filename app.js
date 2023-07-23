@@ -39,7 +39,14 @@ window.addEventListener('scroll', () => {
             else{
                 ensembles.classList.remove('show');
             }
-        } 
+        } else if (window.innerWidth >= 500){
+            if (window.scrollY >= 10) {
+                ensembles.classList.add('show');
+            } 
+            else{
+                ensembles.classList.remove('show');
+            }
+        }
         else {
             if (window.scrollY >= 10) {
                 ensembles.classList.add('show');
@@ -48,11 +55,27 @@ window.addEventListener('scroll', () => {
                 ensembles.classList.remove('show');
             }
         }
-        if (window.scrollY >= 900) {
-           img_kineo.classList.add('show');
-        } 
-        else{
-            img_kineo.classList.remove('show');
+        if (window.innerWidth >= 991) {
+            if (window.scrollY >= 900) {
+               img_kineo.classList.add('show');
+            } 
+            else{
+                img_kineo.classList.remove('show');
+            }
+        } else if (window.innerWidth >= 500) {
+            if (window.scrollY >= 700) {
+                img_kineo.classList.add('show');
+             } 
+             else{
+                 img_kineo.classList.remove('show');
+             }
+        } else {
+            if (window.scrollY >= 900) {
+                img_kineo.classList.add('show');
+             } 
+             else{
+                 img_kineo.classList.remove('show');
+             }
         }
         if (window.innerWidth >= 991){
             if (window.scrollY >= 1700) {
@@ -78,7 +101,30 @@ window.addEventListener('scroll', () => {
                telephone.classList.remove('show');
                email.classList.remove('show');
             }
-        } else {
+        } else if (window.innerWidth >= 500) {
+            if (window.scrollY >= 1300) {
+                img_mouveo.classList.add('show');
+            } 
+            else{
+               img_mouveo.classList.remove('show');
+            }
+            if (window.scrollY >= 2100) {
+                img_osteo.classList.add('show');
+             } 
+             else{
+                img_osteo.classList.remove('show');
+             }
+             if (window.scrollY >= 2700) {
+                cabinet.classList.add('show');
+                telephone.classList.add('show');
+                email.classList.add('show');
+            } 
+            else{
+               cabinet.classList.remove('show');
+               telephone.classList.remove('show');
+               email.classList.remove('show');
+            }
+        }else {
             if (window.scrollY >= 1400) {
                 img_mouveo.classList.add('show');
             } 
@@ -107,43 +153,104 @@ window.addEventListener('scroll', () => {
         
     }
     if (page == "osteo.html") {
-        if (window.scrollY >= 300) {
-            image_osteo.classList.add('show')
-        }
-        else{
-            image_osteo.classList.remove('show')
+        if (window.innerWidth >= 500){
+            if (window.scrollY >= 300) {
+                image_osteo.classList.add('show')
+            }
+            else{
+                image_osteo.classList.remove('show')
+            }
+        } else {
+            if (window.scrollY >= 1000) {
+                image_osteo.classList.add('show')
+            }
+            else{
+                image_osteo.classList.remove('show')
+            }
         }
     }
     if (page == "mouveo.html") {
-        if (window.scrollY >= 2600) {
-            forme.classList.add('text-formes-on')
+        if (window.innerWidth >= 991) {
+            if (window.scrollY >= 2600) {
+                forme.classList.add('text-formes-on')
+            }
+            else{
+                forme.classList.remove('text-formes-on')
+            }
         }
-        else{
-            forme.classList.remove('text-formes-on')
+        else if (window.innerWidth >= 500){
+            if (window.scrollY >= 3200) {
+                forme.classList.add('text-formes-on')
+            }
+            else{
+                forme.classList.remove('text-formes-on')
+            }
+        } else{
+            if (window.scrollY >= 3600) {
+                forme.classList.add('text-formes-on')
+            }
+            else{
+                forme.classList.remove('text-formes-on')
+            }
         }
     }
     if (page == "kineo.html") {
-        if (window.scrollY >= 250) {
-            forme.classList.add('text-formes-on')
+        if (window.innerWidth >= 991){
+            if (window.scrollY >= 250) {
+                forme.classList.add('text-formes-on')
+            }
+            else{
+                forme.classList.remove('text-formes-on')
+            }
+        }else if (window.innerWidth >= 500){
+            if (window.scrollY >= 800) {
+                forme.classList.add('text-formes-on')
+            }
+            else{
+                forme.classList.remove('text-formes-on')
+            }
         }
-        else{
-            forme.classList.remove('text-formes-on')
+         else {
+            if (window.scrollY >= 1400) {
+                forme.classList.add('text-formes-on')
+            }
+            else{
+                forme.classList.remove('text-formes-on')
+            }
         }
     }
 });
 
 if (page == "mouveo.html") {
     window.addEventListener('scroll', () => {
-        if (window.scrollY >= 800) {
-            massage.classList.add('show');
-            marche.classList.add('show');
-            coaching.classList.add('show');
-         } else{
-            massage.classList.remove('show');
-            marche.classList.remove('show');
-            coaching.classList.remove('show');
-         } 
-    })
+        if (window.innerWidth >= 500){
+            if (window.scrollY >= 800) {
+                massage.classList.add('show');
+                marche.classList.add('show');
+                coaching.classList.add('show');
+             } else{
+                massage.classList.remove('show');
+                marche.classList.remove('show');
+                coaching.classList.remove('show');
+             } 
+        } else {
+            if (window.scrollY >= 1200) {
+                massage.classList.add('show');
+             } else{
+                massage.classList.remove('show');
+             } 
+             if (window.scrollY >= 1750) {
+                marche.classList.add('show');
+             } else{
+                marche.classList.remove('show');
+             } 
+             if (window.scrollY >= 2050) {
+                coaching.classList.add('show');
+             } else{
+                coaching.classList.remove('show');
+             } 
+        }
+    })  
 }
 
 if (page == "accueil.html") {
@@ -168,7 +275,7 @@ if (page == "a-propos-de-nous.html") {
 
 if (page == "a-propos-de-nous.html") {
     window.addEventListener('scroll', () => {
-        if (window.innerWidth >= 991){
+        if (window.innerWidth >= 500){
             if (window.scrollY >= 400) {
                 ensembles_a.classList.add('show');
             } 
@@ -177,7 +284,7 @@ if (page == "a-propos-de-nous.html") {
             }
         } 
         else {
-            if (window.scrollY >= 1550) {
+            if (window.scrollY >= 700) {
                 ensembles_a.classList.add('show');
             } 
             else{
