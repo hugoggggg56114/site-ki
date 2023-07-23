@@ -659,11 +659,17 @@ nav ul li a:hover{
         width: 260px;
         transition: all 0.5s;
     }
+    .ensemble-cartes-a .carte{
+        height: auto;
+    }
     .carte p, .carte ul{
         color: rgb(26, 26, 26);
         font-family: 'Manrope', sans-serif;
         font-size: 12;
         font-weight: 100;
+    }
+    .carte ul{
+        padding-left: 15;
     }
     .rectangle {
         position: absolute;
@@ -747,18 +753,22 @@ nav ul li a:hover{
         margin-bottom: 50px;
     }
     .text-osteo-osteo h4{
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-    .text-osteo-osteo li{
+        margin-top: 20px;
+        margin-bottom: 20px;
         font-size: 30;
     }
+    .text-osteo-osteo li{
+        font-size: 15;
+    }
     .text-osteo-osteo ul{
-        margin-bottom: 100px;
+        padding-left: 0;
+        width: 300px;
+        margin-bottom: 50px;
     }
     .image-osteo-osteo{
-        height: 1000px;
-        width: 600px;
+        margin: 0;
+        width: 200px;
+        height: 320px;
     }
     .text-osteo h4{
         margin-top: 50px;
@@ -876,17 +886,17 @@ nav ul li a:hover{
     .form-cartes{
         flex-direction: column;
         align-items: center;
-        height: 2000px;
-        margin-top: 300px;
-        margin-bottom: 300px;
+        height: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
     .mouveo-cards{
-        margin-top: 300px;
+        margin-top: 100px;
         margin-bottom: 50px;
-        height: 2600px;
+        height: 1500px;
     }
     .form-cartes-mouveo{
-        margin-top: 800px;
+        margin-top: 300px;
         margin-bottom: 300px;
         flex-direction: column;
         align-items: center;
@@ -894,45 +904,56 @@ nav ul li a:hover{
     .form-cartes div, .form-cartes-mouveo div{
         margin-top: 10px;
         margin-bottom: 10px;
-        height: 700px;
-        width: 750px;
+        height: auto;
+        width: 80vw;
     }
     .form-cartes div:hover, .form-cartes-mouveo div:hover{
         margin-top: 0;
     }
     .form-cartes div h1, .form-cartes-mouveo div h1{
-        font-size: 35px;
+        margin-top: 10px;
+        font-size: 20;
     }
     .form-cartes div ul, .form-cartes div p, .form-cartes-mouveo div ul, .form-cartes-mouveo div p{
-        font-size: 28px;
+        font-size: 15px;
     }
     .form-cartes div img, .form-cartes-mouveo div img{
+        margin-left: 75%;
         height: 80px;
         width: 80px;
     }
     .titre-form-cartes h1{
-        font-size: 55;
-        margin-top: 50px;
+        font-size: 30;
+        margin-top: 10px;
     }
     .titre-form-cartes{
-        margin-bottom: 100px;
+        margin-top: 100px;
+        margin-bottom: 20px;
     }
     .form-cartes{
         margin-top: 0;
     }
     .desc-cab h1{
         margin-left: 5%;
-        font-size: 55;
+        font-size: 30;
     }
     .desc-cab p{
-        margin-left: 10%;
+        margin-left: 15%;
+    }
+    .div-text-formes p{
+        font-size: 15;
+        width: 300;
+        margin-left: 12%;
     }
     .text-formes{
         margin-top: 0;
-        margin-left: -200px;
+        height: 200px;
+        width: 200px;
+        margin-left: -150px;
     }
     .rectangle-gris{
         margin-bottom: 50px;
+        width: 200px;
     }
     .photos_button_suiv:hover{
         color: #fff;
@@ -940,10 +961,14 @@ nav ul li a:hover{
         transform: translateY(-0);
     }
     .photos_button_suiv{
-        font-size: 25;
+        font-size: 15;
     }
     .photos_content img{
-        width: 700px;
+        width: 90vw;
+    }
+    .apa h1{
+        margin-left: 5%;
+        font-size: 30;
     }
 
 
@@ -952,19 +977,22 @@ nav ul li a:hover{
 
 @media screen and (min-width: 500px) and (max-width: 991px) {
     nav ul li a{
-        font-size:  50px ;
-        padding: 60px 100px;
+        font-size:  20px ;
+        padding: 10px 10px;
     }
     .toggle {
         padding-top: 0px;
         display: block;
-        font-size: 4rem;
+        font-size: 2rem;
         cursor: pointer;
         position: relative;
         z-index: 20;
     }
     .ouvrir{
         display: block;
+    }
+    nav{
+        height: 50px;
     }
 
     .menu{
@@ -975,99 +1003,112 @@ nav ul li a:hover{
         text-align: center;
         margin: 0;
         display: flex;
-        position: fixed;
+        position: absolute;
         top:0;
         left:0;
         right: 0;
         height: 100vh;
         background-color: rgb(224, 224, 224);
         flex-direction: column;
-        padding: 2rem;
+        padding: 0;
         justify-content: flex-start;
         transform: translateX(-100%);
         transition: 1s;
     }
     .menu li a{
-        width: 400;
-        padding-top: 30;
-        padding-bottom: 30;
-        margin-top: 80px;
-        margin-bottom: 30px;
+        width: 200;
+        padding-top: 20;
+        padding-bottom: 20;
+        margin-top: 50px;
+        margin-bottom: 0px;
     }
     .open nav{
         justify-content: right;
         padding-right: 40px;
     }
     .open .menu{
-        transform: translateX(-2%);
+        transform: translateX(0);
+    }
+    .image{
+        height: 400px;
     }
     .ensemble-cartes, .ensemble-cartes-a{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 40px;
+        margin-top: 20px;
         margin-bottom: 40px;
     }
     .carte{
-        margin-top: 50px;
+        margin-top: 20px;
         font-family: 'Poppins', sans-serif;
-        font-size: 40px;
+        font-size: 18;
         color: #77AAD9;
         margin-right: 10px;
         margin-left: 10px;
         padding: 30px;
         background-color: #e9f2fa;
         display: block;
-        height: 300px;
-        width: 700px;
+        height: 100px;
+        width: 260px;
         transition: all 0.5s;
+    }
+    .ensemble-cartes-a .carte{
+        height: auto;
     }
     .carte p, .carte ul{
         color: rgb(26, 26, 26);
         font-family: 'Manrope', sans-serif;
-        font-size: 30px;
+        font-size: 12;
         font-weight: 100;
+    }
+    .carte ul{
+        padding-left: 15;
     }
     .rectangle {
         position: absolute;
         display: flex;
         flex-direction: column;
-        margin-top: 350px;
+        margin-top: 170px;
         margin-left: 5%;
-        padding: 30px;
+        padding: 20px;
         background-color: white;
-        width: 570px;
-        height: 370px;
+        width: 250px;
+        height: 160px;
+    }
+    .titre{
+        font-size: 30;
     }
     .sous-titre {
         color: rgb(26, 26, 26);
         font-family: 'Montserrat', sans-serif;
-        margin-top: 40px;
-        margin-left: 40px;
-        font-size: 35px;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 15;
     }
     .middle-titre {
         color: rgb(29, 29, 29);
         font-family: 'Poppins', sans-serif;
-        font-size: 75px;
+        font-size: 30;
     }
     .form-kineo, .form-mouveo {
         margin: 0;
         display: flex;
         flex-direction: row-reverse;
         width: 100%;
-        height: 1300;
+        height: auto;
         padding: 30px 30px 30px;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .form-osteo{
         margin-right: 0;
         margin-left: 0;
+        padding-bottom: 20px;
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
-        height: 1750px;
+        height: auto;
         justify-content: flex-end;
         align-items: center;
     }
@@ -1075,6 +1116,7 @@ nav ul li a:hover{
         visibility: hidden;
     }
     .forms{
+        margin-bottom: 50px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1083,8 +1125,9 @@ nav ul li a:hover{
     }
     .text-kineo, .text-mouveo, .text-osteo{
         margin-left: 0;
+        width: 200px;
         color: white;
-        font-size: 100px;
+        font-size: 10;
         font-family: 'Poppins', sans-serif;
     }
 
@@ -1099,36 +1142,42 @@ nav ul li a:hover{
     }
 
     .text-kineo h4 , .text-mouveo h4, .text-osteo h4{
-        font-size: 110px;
+        font-size: 40;
         margin-top: 0px;
+        margin-left: 20px;
         margin-bottom: 50px;
     }
     .text-osteo-osteo h4{
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-    .text-osteo-osteo li{
+        margin-top: 20px;
+        margin-bottom: 20px;
         font-size: 30;
     }
+    .text-osteo-osteo li{
+        font-size: 15;
+    }
     .text-osteo-osteo ul{
-        margin-bottom: 100px;
+        padding-left: 0;
+        width: 300px;
+        margin-bottom: 50px;
     }
     .image-osteo-osteo{
-        height: 1000px;
-        width: 600px;
+        margin: 0;
+        width: 200px;
+        height: 320px;
     }
     .text-osteo h4{
         margin-top: 50px;
         margin-bottom: 0px;
     }
     .text-kineo ul, .text-mouveo ul, .text-osteo ul{
-        font-size: 37px;
+        font-size: 15px;
+    
     }
     .image-kineo-img, .image-mouveo-img{
-        margin-top: 220px;
-        width: 400px;
-        height: 650px;
-        margin-left: 40px;
+        margin-top: 100px;
+        width: 160px;
+        height: 260px;
+        margin-left: 0px;
         border-radius: 15px;
     }
     .image-osteo-img{
@@ -1138,45 +1187,52 @@ nav ul li a:hover{
         width: 40vh;
     }
     .btn-kineo button, .btn-mouveo button{
-        width: 400px;
-        height: 100px;
-        font-size: 36px;
-        margin-left: 420px;
-        margin-top: 100px;
+        width: 150px;
+        height: 50px;
+        font-size: 13;
+        margin-left: 20px;
+        margin-top: 50px;
     }
     .btn-osteo button{
         margin: 0;
         margin-top: 50px;
         text-align: center;
         align-items: center;
-        width: 400px;
-        height: 100px;
-        font-size: 36px;
+        width: 150px;
+        height: 50px;
+        font-size: 13px;
     }
     .sous-titre-accompagnement{
-        font-size: 30.6px;
+        font-size: 12px;
     }
 
     .contact, .contact-a-propos{
-        height: 2600px;
+        height: auto;
     }
 
     .blocs-rencontrer{
         flex-direction: column;
     }
     .bloc-rencontrer-cabinet, .bloc-rencontrer-telephone, .bloc-rencontrer-email, .bloc-rencontrer-cabinet-a, .bloc-rencontrer-telephone-a, .bloc-rencontrer-email-a{
-        width: 740px;
-        height: 500px;
+        width: 200px;
+        height: 200px;
     }
     .bloc-rencontrer-cabinet img, .bloc-rencontrer-telephone img, .bloc-rencontrer-email img, .bloc-rencontrer-cabinet-a img, .bloc-rencontrer-telephone-a img, .bloc-rencontrer-email-a img{
-        width: 150px;
-        height: 150px;
+        width: 50px;
+        height: 50px;
     }
     .blocs-rencontrer h1, .rencontrer-carte h1{
-        font-size: 50;
+        font-size: 20;
     }
-    .blocs-rencontrer p, .rencontrer-carte p{
-        font-size: 40;
+    .blocs-rencontrer p{
+        font-size: 15;
+    }
+    .rencontrer-carte p{
+        font-size: 13;
+    }
+    iframe{
+        width: 80vw;
+        height: 300px;
     }
 
 
@@ -1186,26 +1242,27 @@ nav ul li a:hover{
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 800px;
+        height: auto;
         background-color: rgb(29, 29, 29);
     }
 
     .footer-logos {
+        padding-top: 30px;
         padding-bottom: 75px;
         order: 2;
         display: flex;
         flex-direction: row;
     }
     .footer-logos img{
-        height: 140px;
-        width: 340px;
+        height: 70px;
+        width: 140px;
     }
     .footer-text{
         padding-bottom: 75px;
         order: 3;
     }
     .footer-text a{
-        font-size: 50px;
+        font-size: 20px;
         color: white;
         font-family: 'Montserrat', sans-serif;    
     }
@@ -1217,24 +1274,24 @@ nav ul li a:hover{
     }
 
     .footer-reseaux img{
-        height: 120px;
-        width: 120px;
+        height: 50px;
+        width: 50px;
     }
 
     .form-cartes{
         flex-direction: column;
         align-items: center;
-        height: 2000px;
-        margin-top: 300px;
-        margin-bottom: 300px;
+        height: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
     .mouveo-cards{
-        margin-top: 300px;
+        margin-top: 100px;
         margin-bottom: 50px;
-        height: 2600px;
+        height: 1200px;
     }
     .form-cartes-mouveo{
-        margin-top: 800px;
+        margin-top: 300px;
         margin-bottom: 300px;
         flex-direction: column;
         align-items: center;
@@ -1242,45 +1299,56 @@ nav ul li a:hover{
     .form-cartes div, .form-cartes-mouveo div{
         margin-top: 10px;
         margin-bottom: 10px;
-        height: 700px;
-        width: 750px;
+        height: auto;
+        width: 80vw;
     }
     .form-cartes div:hover, .form-cartes-mouveo div:hover{
         margin-top: 0;
     }
     .form-cartes div h1, .form-cartes-mouveo div h1{
-        font-size: 35px;
+        margin-top: 10px;
+        font-size: 20;
     }
     .form-cartes div ul, .form-cartes div p, .form-cartes-mouveo div ul, .form-cartes-mouveo div p{
-        font-size: 28px;
+        font-size: 15px;
     }
     .form-cartes div img, .form-cartes-mouveo div img{
+        margin-left: 75%;
         height: 80px;
         width: 80px;
     }
     .titre-form-cartes h1{
-        font-size: 55;
-        margin-top: 50px;
+        font-size: 30;
+        margin-top: 10px;
     }
     .titre-form-cartes{
-        margin-bottom: 100px;
+        margin-top: 100px;
+        margin-bottom: 20px;
     }
     .form-cartes{
         margin-top: 0;
     }
     .desc-cab h1{
         margin-left: 5%;
-        font-size: 55;
+        font-size: 30;
     }
     .desc-cab p{
-        margin-left: 10%;
+        margin-left: 15%;
+    }
+    .div-text-formes p{
+        font-size: 15;
+        width: 600;
+        margin-left: 12%;
     }
     .text-formes{
         margin-top: 0;
-        margin-left: -200px;
+        height: 200px;
+        width: 200px;
+        margin-left: -150px;
     }
     .rectangle-gris{
         margin-bottom: 50px;
+        width: 200px;
     }
     .photos_button_suiv:hover{
         color: #fff;
@@ -1288,14 +1356,18 @@ nav ul li a:hover{
         transform: translateY(-0);
     }
     .photos_button_suiv{
-        font-size: 25;
+        font-size: 15;
     }
-    .photos_content img{
-        width: 700px;
+    .form-cartes-mouveo{
+        margin-top: 150px;
     }
+    .apa h1{
+        margin-left: 5%;
+        font-size: 30;
+    }
+
 
 }
-
 
 
 
