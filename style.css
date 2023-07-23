@@ -125,7 +125,7 @@ nav ul li a:hover{
     justify-content: center;
 }
 
-.ensemble-cartes{
+.ensemble-cartes, .ensemble-cartes-a{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -157,7 +157,7 @@ nav ul li a:hover{
     margin-top: 20px;
 }
 
-.carte p{
+.carte p, .carte ul{
     color: rgb(26, 26, 26);;
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
@@ -165,6 +165,9 @@ nav ul li a:hover{
 }
 
 
+.apa{
+    font-family: "Open Sans", sans-serif;
+}
 
 .form-kineo, .form-mouveo {
     display: flex;
@@ -195,7 +198,7 @@ nav ul li a:hover{
     background-color: #adcce9;
 }
 
-.text-kineo, .text-mouveo, .text-osteo{
+.text-kineo, .text-mouveo, .text-osteo, .text-osteo-osteo{
     margin-left: 50px;
     right: 0;
     color: white;
@@ -208,8 +211,11 @@ nav ul li a:hover{
 .text-kineo h4, .text-mouveo h4, .text-osteo h4{
     margin-top: 20px;
 }
+.text-osteo-osteo h4{
+    margin-top: -20;
+}
 
-.text-kineo ul, .text-mouveo ul, .text-osteo ul{
+.text-kineo ul, .text-mouveo ul, .text-osteo ul, .text-osteo-osteo ul{
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
     color: rgb(29, 29, 29);
@@ -257,7 +263,7 @@ nav ul li a:hover{
     margin-bottom: 200px;
 }
 
-.image-kineo-img, .image-mouveo-img, .image-osteo-img{
+.image-kineo-img, .image-mouveo-img, .image-osteo-img, .image-osteo-osteo{
     border-radius: 15px;
     transform: translateX(-100%);
     opacity: 0;
@@ -271,10 +277,13 @@ nav ul li a:hover{
 
 
 
-.contact{
+.contact, .contact-a-propos{
     background-color: #f3fbfa;
     height: 1000px;
     width: 100%;
+}
+.contact-a-propos{
+    margin-top: 100px;
 }
 .rencontrer{
     display: flex;
@@ -305,25 +314,20 @@ nav ul li a:hover{
     width: 380px;
     height: 243px;
 }
-.bloc-rencontrer-cabinet{
+.bloc-rencontrer-cabinet-a, .bloc-rencontrer-telephone-a, .bloc-rencontrer-email-a{
+    opacity: 0;
+    transition: all 1s ease-in;
+    width: 380px;
+    height: 243px;
+}
+
+.bloc-rencontrer-cabinet, .bloc-rencontrer-cabinet-a{
     transform: translateX(-100%);
     transition: all 1s ease-in-out;
 }
-.bloc-rencontrer-email{
+.bloc-rencontrer-email, .bloc-rencontrer-email-a{
     transform: translateX(100%);
     transition: all 1s ease-in-out;
-}
-
-#cabinet{
-    opacity: 0;
-    transition: all 1s ease-out;
-}
-#telephone{
-    opacity: 0;
-}
-#email{
-    opacity: 0;
-    transition: all 1s ease-out;
 }
 
 
@@ -477,18 +481,29 @@ nav ul li a:hover{
 
 
 
-.desc-cab h1{
+.desc-cab h1, .apa h1{
     color: #93d6d0;
     margin-left: 18%;
     margin-bottom: 50px;
     font-family: 'Poppins', sans-serif;
     font-size: 45;
 }
-.desc-cab p{
+.apa p{
+    letter-spacing: 1px;
     width: 800px;
     z-index: 20;
     margin-left: 22%;
     line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 27px;
+}
+.desc-cab p{
+    width: 900px;
+    z-index: 20;
+    margin-left: 22%;
+    line-height: 2;
+    font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 25px;
@@ -499,8 +514,14 @@ nav ul li a:hover{
     margin-left: -150px;
     width: 400px;
     height: 400px;
-    border-radius: 38% 62% 92% 8% / 73% 25% 75% 27% ;
     background-color: #93d6d0;
+    border-radius: 300px;
+    opacity: 0.3;
+    transition: all 1.5s ease-in-out;
+}
+.text-formes-on{
+    opacity: 1;
+    border-radius: 38% 62% 92% 8% / 73% 25% 75% 27% ;
 }
 .div-text-formes{
     margin-bottom: 100px;
@@ -548,22 +569,385 @@ nav ul li a:hover{
     justify-content: center;
 }
 
-  
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: 200ms opacity ease-in-out;
-  transition-delay: 200ms;
-}
+
 
 .mySlides{
+    opacity: 1;   
     display: block;
     width: 500px;
 }
-  
 
-@media all and (max-width: 991px) {
+
+
+
+@media screen and (max-width: 500px) {
+    nav ul li a{
+        font-size:  20px ;
+        padding: 10px 10px;
+    }
+    .toggle {
+        padding-top: 0px;
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+    .ouvrir{
+        display: block;
+    }
+    nav{
+        height: 50px;
+    }
+
+    .menu{
+        width: 100%;
+        opacity: 0.95;
+        z-index: 10;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        height: 100vh;
+        background-color: rgb(224, 224, 224);
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+        transform: translateX(-100%);
+        transition: 1s;
+    }
+    .menu li a{
+        width: 200;
+        padding-top: 20;
+        padding-bottom: 20;
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    .open nav{
+        justify-content: right;
+        padding-right: 40px;
+    }
+    .open .menu{
+        transform: translateX(0);
+    }
+    .image{
+        height: 400px;
+    }
+    .ensemble-cartes, .ensemble-cartes-a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .carte{
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18;
+        color: #77AAD9;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 30px;
+        background-color: #e9f2fa;
+        display: block;
+        height: 100px;
+        width: 260px;
+        transition: all 0.5s;
+    }
+    .carte p, .carte ul{
+        color: rgb(26, 26, 26);
+        font-family: 'Manrope', sans-serif;
+        font-size: 12;
+        font-weight: 100;
+    }
+    .rectangle {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-top: 170px;
+        margin-left: 5%;
+        padding: 20px;
+        background-color: white;
+        width: 250px;
+        height: 160px;
+    }
+    .titre{
+        font-size: 30;
+    }
+    .sous-titre {
+        color: rgb(26, 26, 26);
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 15;
+    }
+    .middle-titre {
+        color: rgb(29, 29, 29);
+        font-family: 'Poppins', sans-serif;
+        font-size: 30;
+    }
+    .form-kineo, .form-mouveo {
+        margin: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        height: auto;
+        padding: 30px 30px 30px;
+        justify-content: center;
+    }
+    .form-osteo{
+        margin-right: 0;
+        margin-left: 0;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .reseaux a{
+        visibility: hidden;
+    }
+    .forms{
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-kineo, .text-mouveo, .text-osteo{
+        margin-left: 0;
+        width: 200px;
+        color: white;
+        font-size: 10;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .text-osteo, .text-osteo-osteo{
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        text-align: center;
+        width: 50vh;
+    }
+
+    .text-kineo h4 , .text-mouveo h4, .text-osteo h4{
+        font-size: 40;
+        margin-top: 0px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+    .text-osteo-osteo h4{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .text-osteo-osteo li{
+        font-size: 30;
+    }
+    .text-osteo-osteo ul{
+        margin-bottom: 100px;
+    }
+    .image-osteo-osteo{
+        height: 1000px;
+        width: 600px;
+    }
+    .text-osteo h4{
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    .text-kineo ul, .text-mouveo ul, .text-osteo ul{
+        font-size: 15px;
+    
+    }
+    .image-kineo-img, .image-mouveo-img{
+        margin-top: 100px;
+        width: 160px;
+        height: 260px;
+        margin-left: 0px;
+        border-radius: 15px;
+    }
+    .image-osteo-img{
+        margin: 0;
+        margin-top: 50px;
+        height: 40vh;
+        width: 40vh;
+    }
+    .btn-kineo button, .btn-mouveo button{
+        width: 150px;
+        height: 50px;
+        font-size: 13;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+    .btn-osteo button{
+        margin: 0;
+        margin-top: 50px;
+        text-align: center;
+        align-items: center;
+        width: 150px;
+        height: 50px;
+        font-size: 13px;
+    }
+    .sous-titre-accompagnement{
+        font-size: 12px;
+    }
+
+    .contact, .contact-a-propos{
+        height: auto;
+    }
+
+    .blocs-rencontrer{
+        flex-direction: column;
+    }
+    .bloc-rencontrer-cabinet, .bloc-rencontrer-telephone, .bloc-rencontrer-email, .bloc-rencontrer-cabinet-a, .bloc-rencontrer-telephone-a, .bloc-rencontrer-email-a{
+        width: 200px;
+        height: 200px;
+    }
+    .bloc-rencontrer-cabinet img, .bloc-rencontrer-telephone img, .bloc-rencontrer-email img, .bloc-rencontrer-cabinet-a img, .bloc-rencontrer-telephone-a img, .bloc-rencontrer-email-a img{
+        width: 50px;
+        height: 50px;
+    }
+    .blocs-rencontrer h1, .rencontrer-carte h1{
+        font-size: 20;
+    }
+    .blocs-rencontrer p, .rencontrer-carte p{
+        font-size: 15;
+    }
+    iframe{
+        width: 400px;
+        height: 300px;
+    }
+
+
+    .footer {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: rgb(29, 29, 29);
+    }
+
+    .footer-logos {
+        padding-top: 30px;
+        padding-bottom: 75px;
+        order: 2;
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-logos img{
+        height: 70px;
+        width: 140px;
+    }
+    .footer-text{
+        padding-bottom: 75px;
+        order: 3;
+    }
+    .footer-text a{
+        font-size: 20px;
+        color: white;
+        font-family: 'Montserrat', sans-serif;    
+    }
+    .footer-reseaux {
+        padding-top: 40px;
+        order: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-reseaux img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .form-cartes{
+        flex-direction: column;
+        align-items: center;
+        height: 2000px;
+        margin-top: 300px;
+        margin-bottom: 300px;
+    }
+    .mouveo-cards{
+        margin-top: 300px;
+        margin-bottom: 50px;
+        height: 2600px;
+    }
+    .form-cartes-mouveo{
+        margin-top: 800px;
+        margin-bottom: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-cartes div, .form-cartes-mouveo div{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 700px;
+        width: 750px;
+    }
+    .form-cartes div:hover, .form-cartes-mouveo div:hover{
+        margin-top: 0;
+    }
+    .form-cartes div h1, .form-cartes-mouveo div h1{
+        font-size: 35px;
+    }
+    .form-cartes div ul, .form-cartes div p, .form-cartes-mouveo div ul, .form-cartes-mouveo div p{
+        font-size: 28px;
+    }
+    .form-cartes div img, .form-cartes-mouveo div img{
+        height: 80px;
+        width: 80px;
+    }
+    .titre-form-cartes h1{
+        font-size: 55;
+        margin-top: 50px;
+    }
+    .titre-form-cartes{
+        margin-bottom: 100px;
+    }
+    .form-cartes{
+        margin-top: 0;
+    }
+    .desc-cab h1{
+        margin-left: 5%;
+        font-size: 55;
+    }
+    .desc-cab p{
+        margin-left: 10%;
+    }
+    .text-formes{
+        margin-top: 0;
+        margin-left: -200px;
+    }
+    .rectangle-gris{
+        margin-bottom: 50px;
+    }
+    .photos_button_suiv:hover{
+        color: #fff;
+        box-shadow: rgba(0, 0, 0) 0 0 0;
+        transform: translateY(-0);
+    }
+    .photos_button_suiv{
+        font-size: 25;
+    }
+    .photos_content img{
+        width: 700px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 991px) {
     nav ul li a{
         font-size:  50px ;
         padding: 60px 100px;
@@ -614,7 +998,7 @@ nav ul li a:hover{
     .open .menu{
         transform: translateX(-2%);
     }
-    .ensemble-cartes{
+    .ensemble-cartes, .ensemble-cartes-a{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -636,7 +1020,7 @@ nav ul li a:hover{
         width: 700px;
         transition: all 0.5s;
     }
-    .carte p{
+    .carte p, .carte ul{
         color: rgb(26, 26, 26);
         font-family: 'Manrope', sans-serif;
         font-size: 30px;
@@ -700,7 +1084,8 @@ nav ul li a:hover{
         font-size: 100px;
         font-family: 'Poppins', sans-serif;
     }
-    .text-osteo{
+
+    .text-osteo, .text-osteo-osteo{
         flex-wrap: wrap;
         display: flex;
         align-items: center;
@@ -709,10 +1094,25 @@ nav ul li a:hover{
         text-align: center;
         width: 50vh;
     }
+
     .text-kineo h4 , .text-mouveo h4, .text-osteo h4{
         font-size: 110px;
         margin-top: 0px;
         margin-bottom: 50px;
+    }
+    .text-osteo-osteo h4{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .text-osteo-osteo li{
+        font-size: 30;
+    }
+    .text-osteo-osteo ul{
+        margin-bottom: 100px;
+    }
+    .image-osteo-osteo{
+        height: 1000px;
+        width: 600px;
     }
     .text-osteo h4{
         margin-top: 50px;
@@ -754,18 +1154,18 @@ nav ul li a:hover{
         font-size: 30.6px;
     }
 
-    .contact{
+    .contact, .contact-a-propos{
         height: 2600px;
     }
 
     .blocs-rencontrer{
         flex-direction: column;
     }
-    .bloc-rencontrer-cabinet, .bloc-rencontrer-telephone, .bloc-rencontrer-email{
+    .bloc-rencontrer-cabinet, .bloc-rencontrer-telephone, .bloc-rencontrer-email, .bloc-rencontrer-cabinet-a, .bloc-rencontrer-telephone-a, .bloc-rencontrer-email-a{
         width: 740px;
         height: 500px;
     }
-    .bloc-rencontrer-cabinet img, .bloc-rencontrer-telephone img, .bloc-rencontrer-email img{
+    .bloc-rencontrer-cabinet img, .bloc-rencontrer-telephone img, .bloc-rencontrer-email img, .bloc-rencontrer-cabinet-a img, .bloc-rencontrer-telephone-a img, .bloc-rencontrer-email-a img{
         width: 150px;
         height: 150px;
     }
@@ -896,6 +1296,8 @@ nav ul li a:hover{
 
 
 
+
+
 @media all and (max-width:1300px) and (min-width:991px){
     .middle-titre{
         font-size: 40px;
@@ -908,7 +1310,7 @@ nav ul li a:hover{
         width: 160px;
         font-size: 15px;
     }
-    .carte p{
+    .carte p, .carte ul{
         font-size: 14px;
     }
     .blocs-rencontrer img{
